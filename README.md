@@ -13,7 +13,7 @@ Our network dissection experiment develop on top of Bolei Zhou's [network dissec
     ./script/dlbroden.sh
     ./script/dlzoo_example.sh
 ```
-* setup the model, target layers and other settings in [setting/settings.py](./setting/settings.py).
+* setup the model, target layers and other settings in [setting/settings.py](setting/settings.py).
 * Then run:
 ```
     python netdissect.py
