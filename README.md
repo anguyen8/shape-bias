@@ -59,15 +59,16 @@ def hook_feature(module, input, output):
 
 def sample_loading_and_hooking():
     global features_blobs
+    # load robust model
     if settings.MODEL[-1] in ['r', 'R']:
         '''loading robust model'''
         dataset = DATASETS['imagenet']('robustness/dataset')
         model, checkpoint = make_and_restore_model(arch=settings.MODEL[:-2],
                                                 dataset=dataset, parallel=settings.MODEL_PARALLEL,
                                                 resume_path=settings.MODEL_FILE)
-
+        # add hooker on target layers
         model = loadrobust(hook_feature, model, checkpoint,  settings.FEATURE_NAMES)
-
+    
     img = Image.open('figures/real/ILSVRC2012_val_00002691.JPEG')
 
     TEST_TRANSFORMS_IMAGENET = transforms.Compose([
@@ -77,9 +78,10 @@ def sample_loading_and_hooking():
         ])
 
     input_tensor = TEST_TRANSFORMS_IMAGENET(img).unsqueeze(0).cuda()
-
+    # make predictions
     logit, _ = model(input_tensor)
     pred_class = logit.argmax()
+    # put hooked features in to a list.
     hooked_features = dict(zip(["1", "4", "7", "9", "11"], features_blobs)) # dict for features of layer1, 4, 7, 9, 11.
     return logit, pred_class, hooked_features
 
