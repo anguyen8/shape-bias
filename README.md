@@ -105,7 +105,7 @@ The .npy file contain a list of image names of ImageNet val set.
  'ILSVRC2012_val_00049991.JPEG' 'ILSVRC2012_val_00049999.JPEG']
 ```
 
-<<<<<<< HEAD
+
 ### 7. Simple sample to evaluate robust model on ImageNet
 To reproduce Table. 1 prediction accuracy of robust model in our paper, use the following script in genereal cases:
 ```
