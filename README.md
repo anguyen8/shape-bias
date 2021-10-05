@@ -2,7 +2,7 @@
 
 This repository contains source code necessary to reproduce some of the main results in our paper:
 
-Chen*, Agarwal*, Nguyen* (2020). _SAM: The sensitivity of attribution methods to hyperparameters_. Computer Vision and Pattern Recognition (CVPR). **Oral** presentation. [paper](http://anhnguyen.me/project/sam/) | [code](https://github.com/anguyen8/sam)
+Chen*, Agarwal*, Nguyen* (2020). _The shape and simplicity biases of adversarially robust ImageNet-trained CNNs_. [paper](https://arxiv.org/abs/2006.09373) | [code](https://github.com/anguyen8/shape-bias)
 
 **If you use this software, please consider citing:**
 
