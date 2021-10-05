@@ -20,20 +20,20 @@ We use [Madry's robustness packages](https://github.com/MadryLab/robustness) to 
 * The pretrained models are avaliable [here](https://drive.google.com/drive/u/0/folders/1KdJ0aK0rPjmowS8Swmzxf8hX6gU5gG2U).
 
 ### 3. Requirements
-We recommand use conda to create new enviroment:
+We recommend using Anaconda to create new enviroment:
 ```
 conda env create -f enviroment.yml -n {NAME OF NEW ENV}
 ```
 
-### 4. Network dissection
-Our network dissection experiment develop on top of Bolei Zhou's [network dissection](https://github.com/CSAILVision/NetDissect-Lite) work.
+### 4. Network Dissection
+Our Network Dissection experiment was developed on top of Bolei Zhou's [network dissection](https://github.com/CSAILVision/NetDissect-Lite).
 
-* In order to run network dissection, you will need follow [network dissection](https://github.com/CSAILVision/NetDissect-Lite) repo to download the Broden dataset using:
+* In order to run Network Dissection, you will need follow [network dissection](https://github.com/CSAILVision/NetDissect-Lite) repo to download the Broden dataset using:
 ```
     ./script/dlbroden.sh
     ./script/dlzoo_example.sh
 ```
-* setup the model, target layers and other settings in [settings/settings.py](settings/settings.py).
+* Setup the model, target layers and other settings in [settings/settings.py](settings/settings.py).
 * Then run:
 ```
     python netdissect.py
