@@ -98,13 +98,14 @@ import numpy as np
 alexnet_intersect_img_idx = np.load('data/intersection_alexnet_alexnet-r.npy')
 ```
 The .npy file contain a list of image names of ImageNet val set.
-```python
+```
 >>> print(intersect_img_idx)
 ['ILSVRC2012_val_00000003.JPEG' 'ILSVRC2012_val_00000007.JPEG'
  'ILSVRC2012_val_00000012.JPEG' ... 'ILSVRC2012_val_00049990.JPEG'
  'ILSVRC2012_val_00049991.JPEG' 'ILSVRC2012_val_00049999.JPEG']
 ```
 
+<<<<<<< HEAD
 ### 7. Simple sample to evaluate robust model on ImageNet
 To reproduce Table. 1 prediction accuracy of robust model in our paper, use the following script in genereal cases:
 ```
@@ -114,3 +115,6 @@ for example,
 ```
 python evaluate_on_imaget.py --model_name alexnet --model_path zoo/alexnet_r.pt --data_path path/to/ILSVRC2012 --madry_model
 ```
+=======
+### MIT License
+>>>>>>> 2c4466fc3d4ebaf42b3a5ffa8a078685287db67b
