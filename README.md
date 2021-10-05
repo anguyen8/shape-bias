@@ -45,16 +45,12 @@ Our Network Dissection experiment was developed on top of Bolei Zhou's [network 
 ```python
 from settings import settings
 from loader.model_loader import loadrobust, loadmodel
-from feature_operation import hook_feature, FeatureOperator
-from visualize.report import generate_html_summary
-from util.clean import clean
+from feature_operation import hook_feature
 # for loading robust version
 from robustness.model_utils import make_and_restore_model
 from robustness.datasets import DATASETS
 import torch
 import numpy as np
-
-fo = FeatureOperator()
 
 if settings.MODEL[-1] in ['r', 'R']:
     '''loading robust model'''
@@ -62,7 +58,6 @@ if settings.MODEL[-1] in ['r', 'R']:
     model, checkpoint = make_and_restore_model(arch=settings.MODEL[:-2],
                                                dataset=dataset, parallel=settings.MODEL_PARALLEL,
                                                resume_path=settings.MODEL_FILE)
-    model = loadrobust(hook_feature, model, checkpoint,  settings.FEATURE_NAMES)
 ```
 * Hook corresponding features:
 ```python
