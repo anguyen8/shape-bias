@@ -18,16 +18,18 @@ def loadmodel(model_name = settings.MODEL, model_path = settings.MODEL_PATH,
     if Madry_model:
         '''load Madry model'''
         dataset = DATASETS['imagenet']('robustness/dataset')
-        model, checkpoint = make_and_restore_model(arch=model_name[:-2],
+        
+        model, checkpoint = make_and_restore_model(arch=model_name[:-2] if model_name[-1] in ['r', 'R'] else model_name,
                                                    dataset=dataset, parallel=model_parallel,
                                                    resume_path=model_path)
         # try to handle Madry model as regular model
-        if model_name == 'googlenet-r':
-            model = model.module.model
-        elif model_name == 'resnet50-r':
-            model = model.module.model
-        elif model_name == 'alexnet-r':
-            model = model.module.model
+        # if model_name == 'googlenet-r':
+        #     model = model.module.model
+        # elif model_name == 'resnet50-r':
+        #     model = model.module.model
+        # elif model_name == 'alexnet-r':
+        #     model = model.module.model
+        # model = model.module.model
     else: # load regular model from pytorch
         checkpoint = torch.load(model_path)
         if type(checkpoint).__name__ == 'OrderedDict' or type(checkpoint).__name__ == 'dict':

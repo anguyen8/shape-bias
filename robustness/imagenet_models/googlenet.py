@@ -203,7 +203,7 @@ class GoogLeNet(nn.Module):
         else:
             return x   # type: ignore[return-value]
 
-    def forward(self, x: Tensor) -> GoogLeNetOutputs:
+    def forward(self, x: Tensor, **dummy) -> GoogLeNetOutputs: #* A dummpy variable is added to the forward function to fit Madry's attacker model.
         x = self._transform_input(x)
         x, aux1, aux2 = self._forward(x)
         aux_defined = self.training and self.aux_logits
