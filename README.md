@@ -117,4 +117,4 @@ python evaluate_on_imaget.py --model_name alexnet --model_path zoo/alexnet_r.pt 
 ```
 =======
 ### MIT License
->>>>>>> 2c4466fc3d4ebaf42b3a5ffa8a078685287db67b
+2c4466fc3d4ebaf42b3a5ffa8a078685287db67b
