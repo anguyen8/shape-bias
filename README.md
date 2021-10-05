@@ -98,7 +98,7 @@ import numpy as np
 alexnet_intersect_img_idx = np.load('data/intersection_alexnet_alexnet-r.npy')
 ```
 The .npy file contain a list of image names of ImageNet val set.
-```python
+```
 >>> print(intersect_img_idx)
 ['ILSVRC2012_val_00000003.JPEG' 'ILSVRC2012_val_00000007.JPEG'
  'ILSVRC2012_val_00000012.JPEG' ... 'ILSVRC2012_val_00049990.JPEG'
