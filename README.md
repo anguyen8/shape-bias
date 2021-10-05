@@ -38,3 +38,6 @@ Our Network Dissection experiment was developed on top of Bolei Zhou's [network 
 ```
     python netdissect.py
 ```
+
+### MIT License
+Code in this repository is licensed under MIT License.
