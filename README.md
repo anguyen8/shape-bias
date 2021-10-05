@@ -89,3 +89,18 @@ if __name__ == '__main__':
     #* A naive sample for load and hook features from robust model
     logit, pred_class, hooked_features = sample_loading_and_hooking()
 ```
+### 6. ImageNet-CL
+We provide the index of [ImageNet-CL(.npy)](data/), where the robust model and standard model both make correct predictions. There are three .npy files, one for each pair of network. i.e. (AlexNet, AlexNet-R). 
+
+* Sample:
+```python
+import numpy as np
+alexnet_intersect_img_idx = np.load('data/intersection_alexnet_alexnet-r.npy')
+```
+The .npy file contain a list of image names of ImageNet val set.
+```python
+>>> print(intersect_img_idx)
+['ILSVRC2012_val_00000003.JPEG' 'ILSVRC2012_val_00000007.JPEG'
+ 'ILSVRC2012_val_00000012.JPEG' ... 'ILSVRC2012_val_00049990.JPEG'
+ 'ILSVRC2012_val_00049991.JPEG' 'ILSVRC2012_val_00049999.JPEG']
+```
