@@ -104,3 +104,5 @@ The .npy file contain a list of image names of ImageNet val set.
  'ILSVRC2012_val_00000012.JPEG' ... 'ILSVRC2012_val_00049990.JPEG'
  'ILSVRC2012_val_00049991.JPEG' 'ILSVRC2012_val_00049999.JPEG']
 ```
+
+### MIT License
