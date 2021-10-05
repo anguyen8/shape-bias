@@ -81,7 +81,7 @@ def sample_loading_and_hooking():
     # make predictions
     logit, _ = model(input_tensor)
     pred_class = logit.argmax()
-    # put hooked features in to a list.
+    # put hooked features in to a dict.
     hooked_features = dict(zip(["1", "4", "7", "9", "11"], features_blobs)) # dict for features of layer1, 4, 7, 9, 11.
     return logit, pred_class, hooked_features
 
