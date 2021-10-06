@@ -39,7 +39,7 @@ Our Network Dissection experiment was developed on top of Bolei Zhou's [network 
     python netdissect.py
 ```
 
-### 5. A toy sample of loading and hook features from robust model. 
+### 5. An example of loading a robust model and setting up feature hooks
 * This sample is avaliable at [load_sample.py](load_sample.py): 
 
 ```python
@@ -106,8 +106,8 @@ The .npy file contain a list of image names of ImageNet val set.
 ```
 
 
-### 7. Simple sample to evaluate robust model on ImageNet
-To reproduce Table. 1 prediction accuracy of robust model in our paper, use the following script in genereal cases:
+### 7. Example of evaluating adversarially robust models on ImageNet
+To reproduce Table. 1 prediction accuracy of robust model in our paper, use the following script:
 ```
 python evaluate_on_imaget.py --model_name {MODEL ARCHITECTURE} --model_path {CHECK POINT PATH} --data_path {PATH TO ILSVRC2012} --madry_model
 ```
@@ -117,4 +117,3 @@ python evaluate_on_imaget.py --model_name alexnet --model_path zoo/alexnet_r.pt 
 ```
 
 ### MIT License
-2c4466fc3d4ebaf42b3a5ffa8a078685287db67b
