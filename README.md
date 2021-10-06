@@ -109,11 +109,11 @@ The .npy file contain a list of image names of ImageNet val set.
 ### 7. Example of evaluating adversarially robust models on ImageNet
 To reproduce Table. 1 prediction accuracy of robust model in our paper, use the following script:
 ```
-python evaluate_on_imaget.py --model_name {MODEL ARCHITECTURE} --model_path {CHECK POINT PATH} --data_path {PATH TO ILSVRC2012} --madry_model
+python eval_on_imagenet.py --model_name {MODEL ARCHITECTURE} --model_path {CHECK POINT PATH} --data_path {PATH TO ILSVRC2012} --madry_model
 ```
 for example,
 ```
-python evaluate_on_imaget.py --model_name alexnet --model_path zoo/alexnet_r.pt --data_path path/to/ILSVRC2012 --madry_model
+python eval_on_imagenet.py --model_name alexnet --model_path zoo/alexnet_r.pt --data_path path/to/ILSVRC2012 --madry_model
 ```
 
 ### MIT License
